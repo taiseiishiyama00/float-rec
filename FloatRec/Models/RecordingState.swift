@@ -56,10 +56,18 @@ class RecordingState: ObservableObject {
         startTime = nil
     }
 
+    private static var defaultDirectory: URL {
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("Recordings", isDirectory: true)
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        return dir
+    }
+
     private func saveFile(from tempURL: URL) async {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.movie]
         panel.nameFieldStringValue = tempURL.lastPathComponent
+        panel.directoryURL = Self.defaultDirectory
         panel.canCreateDirectories = true
 
         let response = panel.runModal()

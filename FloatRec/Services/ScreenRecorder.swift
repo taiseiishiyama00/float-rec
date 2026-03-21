@@ -19,7 +19,11 @@ class ScreenRecorder: NSObject, SCStreamOutput {
             throw RecordingError.noDisplay
         }
 
-        let filter = SCContentFilter(display: display, excludingWindows: [])
+        let bundleID = Bundle.main.bundleIdentifier ?? ""
+        let selfWindows = content.windows.filter {
+            $0.owningApplication?.bundleIdentifier == bundleID
+        }
+        let filter = SCContentFilter(display: display, excludingWindows: selfWindows)
 
         let config = SCStreamConfiguration()
         config.width = display.width * scale
@@ -27,7 +31,7 @@ class ScreenRecorder: NSObject, SCStreamOutput {
         config.minimumFrameInterval = CMTime(value: 1, timescale: CMTimeScale(fps))
         config.showsCursor = true
 
-        let fileName = "FloatRec_\(Self.timestamp()).mov"
+        let fileName = "rec_\(Self.timestamp()).mov"
         let url = FileManager.default.temporaryDirectory
             .appendingPathComponent(fileName)
         outputURL = url
@@ -120,7 +124,7 @@ class ScreenRecorder: NSObject, SCStreamOutput {
 
     private static func timestamp() -> String {
         let f = DateFormatter()
-        f.dateFormat = "yyyy-MM-dd_HH-mm-ss"
+        f.dateFormat = "yyMMddHHmm"
         return f.string(from: Date())
     }
 }
