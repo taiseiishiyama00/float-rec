@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A00B0000000000000000001 /* FloatRecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000001 /* FloatRecApp.swift */; };
+		8A00B0000000000000000002 /* FloatingPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000002 /* FloatingPanelView.swift */; };
+		8A00B0000000000000000003 /* RecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000003 /* RecordingState.swift */; };
+		8A00B0000000000000000004 /* ScreenRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000004 /* ScreenRecorder.swift */; };
+		8A00B0000000000000000005 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000005 /* FloatingPanel.swift */; };
+		8A00B0000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000006 /* Assets.xcassets */; };
+		8A00B0000000000000000007 /* RecordingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F0000000000000000009 /* RecordingSettings.swift */; };
+		8A00B0000000000000000008 /* SettingsPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00F000000000000000000A /* SettingsPopoverView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A00E0000000000000000002 /* FloatRec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatRec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A00F0000000000000000001 /* FloatRecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRecApp.swift; sourceTree = "<group>"; };
+		8A00F0000000000000000002 /* FloatingPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelView.swift; sourceTree = "<group>"; };
+		8A00F0000000000000000003 /* RecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingState.swift; sourceTree = "<group>"; };
+		8A00F0000000000000000004 /* ScreenRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRecorder.swift; sourceTree = "<group>"; };
+		8A00F0000000000000000005 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
+		8A00F0000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A00F0000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A00F0000000000000000008 /* FloatRec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FloatRec.entitlements; sourceTree = "<group>"; };
+		8A00F0000000000000000009 /* RecordingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSettings.swift; sourceTree = "<group>"; };
+		8A00F000000000000000000A /* SettingsPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopoverView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A00C0000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A00A0000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				8A00A0000000000000000002 /* FloatRec */,
+				8A00A0000000000000000007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A00A0000000000000000002 /* FloatRec */ = {
+			isa = PBXGroup;
+			children = (
+				8A00F0000000000000000001 /* FloatRecApp.swift */,
+				8A00A0000000000000000003 /* Views */,
+				8A00A0000000000000000004 /* Models */,
+				8A00A0000000000000000005 /* Services */,
+				8A00A0000000000000000006 /* Helpers */,
+				8A00F0000000000000000006 /* Assets.xcassets */,
+				8A00F0000000000000000007 /* Info.plist */,
+				8A00F0000000000000000008 /* FloatRec.entitlements */,
+			);
+			path = FloatRec;
+			sourceTree = "<group>";
+		};
+		8A00A0000000000000000003 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A00F0000000000000000002 /* FloatingPanelView.swift */,
+				8A00F000000000000000000A /* SettingsPopoverView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A00A0000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A00F0000000000000000003 /* RecordingState.swift */,
+				8A00F0000000000000000009 /* RecordingSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A00A0000000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8A00F0000000000000000004 /* ScreenRecorder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8A00A0000000000000000006 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A00F0000000000000000005 /* FloatingPanel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8A00A0000000000000000007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A00E0000000000000000002 /* FloatRec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A00E0000000000000000001 /* FloatRec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A00D0000000000000000002 /* Build configuration list for PBXNativeTarget "FloatRec" */;
+			buildPhases = (
+				8A00C0000000000000000001 /* Sources */,
+				8A00C0000000000000000002 /* Frameworks */,
+				8A00C0000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatRec;
+			productName = FloatRec;
+			productReference = 8A00E0000000000000000002 /* FloatRec.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A00E0000000000000000003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 8A00D0000000000000000001 /* Build configuration list for PBXProject "FloatRec" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ja;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ja,
+				Base,
+			);
+			mainGroup = 8A00A0000000000000000001;
+			productRefGroup = 8A00A0000000000000000007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A00E0000000000000000001 /* FloatRec */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A00C0000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A00B0000000000000000006 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A00C0000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A00B0000000000000000001 /* FloatRecApp.swift in Sources */,
+				8A00B0000000000000000002 /* FloatingPanelView.swift in Sources */,
+				8A00B0000000000000000003 /* RecordingState.swift in Sources */,
+				8A00B0000000000000000004 /* ScreenRecorder.swift in Sources */,
+				8A00B0000000000000000005 /* FloatingPanel.swift in Sources */,
+				8A00B0000000000000000007 /* RecordingSettings.swift in Sources */,
+				8A00B0000000000000000008 /* SettingsPopoverView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A00D0000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A00D0000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8A00D0000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FloatRec/FloatRec.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FloatRec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.floatrec.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8A00D0000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FloatRec/FloatRec.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FloatRec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.floatrec.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A00D0000000000000000001 /* Build configuration list for PBXProject "FloatRec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A00D0000000000000000003 /* Debug */,
+				8A00D0000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A00D0000000000000000002 /* Build configuration list for PBXNativeTarget "FloatRec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A00D0000000000000000005 /* Debug */,
+				8A00D0000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 8A00E0000000000000000003 /* Project object */;
+}
