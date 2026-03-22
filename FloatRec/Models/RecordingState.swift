@@ -56,7 +56,11 @@ class RecordingState: ObservableObject {
         startTime = nil
     }
 
-    private static var defaultDirectory: URL {
+    private var defaultDirectory: URL {
+        let lastDir = settings.getLastSaveDirectory()
+        if let lastDir, FileManager.default.fileExists(atPath: lastDir.path) {
+            return lastDir
+        }
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent("Recordings", isDirectory: true)
         try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
@@ -67,7 +71,7 @@ class RecordingState: ObservableObject {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.movie]
         panel.nameFieldStringValue = tempURL.lastPathComponent
-        panel.directoryURL = Self.defaultDirectory
+        panel.directoryURL = defaultDirectory
         panel.canCreateDirectories = true
 
         let response = panel.runModal()
@@ -78,6 +82,7 @@ class RecordingState: ObservableObject {
                     try FileManager.default.removeItem(at: url)
                 }
                 try FileManager.default.moveItem(at: tempURL, to: url)
+                settings.setLastSaveDirectory(url.deletingLastPathComponent())
             } catch {
                 print("Save error: \(error.localizedDescription)")
                 try? FileManager.default.removeItem(at: tempURL)

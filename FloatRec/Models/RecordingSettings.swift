@@ -18,4 +18,16 @@ class RecordingSettings: ObservableObject {
         self.resolutionScale = d.integer(forKey: "resolutionScale")
         self.fps = d.integer(forKey: "fps")
     }
+
+    func getLastSaveDirectory() -> URL? {
+        if let urlString = UserDefaults.standard.string(forKey: "lastSaveDirectory"),
+           let url = URL(string: urlString) {
+            return url
+        }
+        return nil
+    }
+
+    func setLastSaveDirectory(_ url: URL) {
+        UserDefaults.standard.set(url.absoluteString, forKey: "lastSaveDirectory")
+    }
 }
